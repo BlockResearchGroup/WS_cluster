@@ -4,6 +4,12 @@
 
 COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Computational Design and Construction for Architecture (IntCDC)"*
 
+## Schedule
+
+* 
+
+---
+
 ## Requirements
 
 * Operating System: Mac (OSX), Windows
@@ -84,3 +90,15 @@ you should type:
 ```
 
 If no error messages appear, you're good to go!
+
+**4. Configure Rhino**
+
+**5. Set up your development environment**
+
+---
+
+## Exercises
+
+---
+
+## Troubleshooting
