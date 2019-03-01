@@ -22,9 +22,9 @@ edges = [(v, u) if not network.has_edge(u, v) else (u, v) for u, v in pairwise(p
 
 # visualise
 
-plotter = NetworkPlotter(network)
+plotter = NetworkPlotter(network, figsize=(10, 7))
 
 plotter.draw_vertices(text='key', facecolor={start: '#ff0000', end: '#ff0000'}, radius=0.15)
 plotter.draw_edges(color={uv: '#ff0000' for uv in edges}, width={uv: 5.0 for uv in edges})
 
-plotter.save('../images/network_shortestpath.png')
+plotter.show()

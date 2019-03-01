@@ -4,8 +4,6 @@
 
 COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Computational Design and Construction for Architecture (IntCDC)"*
 
----
-
 ## Schedule
 
 *   Day 1
@@ -25,41 +23,35 @@ COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Com
     *   13.00: COMPAS projects
     *   14.00: Hackathon
 
-*"COMPAS intro"* is a presentation about the COMPAS ecosystem during which we will
-run various code snippets to get familiar with the design principles and basic
-functionality of the main library.
+*"COMPAS framework"* is a presentation about the structure of COMPAS,
+during which we will run various short code snippets to get familiar with the
+presented concepts and with basic functionality of the main library.
 
 *"COMPAS packages"* gives an overview of the currently available research and extension
 packages and of the package development procedures.
-
 In *"compas_fofin"* we will develop a (dummy) form finding package using the cookiecutter
 template for COMPAS packages.
 
-*"compas_fea"* is a demo of the Finite Element Analysis package for COMPAS,
-and *"compas_fab"* is a demo of the ROS interface.
-For more info, see [FEA workshop]() and [Robotic Assembly workshop](), respectively.
-
----
+*"compas_fea"* and *"compas_fab"* are demos of the Finite Element Analysis
+and ROS interfaces, respectively.
+For more info, see [FEA workshop]() and [Robotic Assembly workshop]().
 
 ## Requirements
 
 * Operating System: Mac (OSX), Windows
 * [Anaconda Python Distribution](https://www.anaconda.com/download/): 3.x
-* [Rhino 5.0/6.0](https://www.rhino3d.com/)
+* [Rhino](https://www.rhino3d.com/)
 * Code editor: Whatever you normally work with for Python coding.
-  Otherwise, we recommend [Sublime Text]() or [VS Code]().
+  Otherwise, we recommend [Sublime Text](https://www.sublimetext.com/) for this workshop.
 * Git: [official command-line client](https://git-scm.com/) or visual GUI (e.g. [Github Desktop](https://desktop.github.com/) or [SourceTree](https://www.sourcetreeapp.com/))
 
-<details><summary><i>Rhino 5.0</i></summary>
-If you use Rhino 5.0, make sure to install the following
-
-* [Grasshopper](https://www.grasshopper3d.com/)
-* [GHPython](https://www.food4rhino.com/app/ghpython)
-* [IronPython 2.7.5](https://github.com/IronLanguages/main/releases/tag/ipy-2.7.5) ([see here for details about this manual update](https://compas-dev.github.io/main/environments/rhino.html#ironpython-1)).
-
-</details>
-
----
+> **Note**
+>
+> If you use Rhino 5.0, make sure to install the following
+> 
+> * [Grasshopper](https://www.grasshopper3d.com/)
+> * [GHPython](https://www.food4rhino.com/app/ghpython)
+> * [IronPython 2.7.5](https://github.com/IronLanguages/main/releases/tag/ipy-2.7.5) ([see here for details about this manual update](https://compas-dev.github.io/main/environments/rhino.html#ironpython-1)).
 
 ## Getting started
 
@@ -98,18 +90,14 @@ conda env create -f workshop.yml
 conda activate workshop
 ```
 
-<details><summary><i>Not working?</i></summary>
-
-Make sure you really are in the repository folder.
-For example, if you cloned the repository into a folder called `Code` in your home directory,
-you should type:
-
-*On Mac*: ```cd ~/Code/WS_cluster```
-<br />*On Windows*: ```cd %USERPROFILE%\Code\WS_cluster```
-
-before running the *conda* commands listed above.
-
-</details>
+> **Not working?**
+>
+> Make sure you really are in the repository folder, before running the commands above.
+> For example, if you cloned the repository into a folder called `Code` in your home directory,
+> you should run the following to change to the correct folder:
+>
+> *On Mac*: ```cd ~/Code/WS_cluster```
+> <br />*On Windows*: ```cd %USERPROFILE%\Code\WS_cluster```
 
 **3. Check your installation**
 
@@ -131,19 +119,28 @@ is active.
 
 **4. Configure Rhino**
 
-To make the installed Python packages of the COMPAS main library available in Rhino,
-run the following from the Anaconda Prompt (Windows) or the Terminal (Mac):
+To make the installed packages available in Rhino,
+run the following from the Anaconda Prompt (on Windows) or the Terminal (on Mac):
 
 ```bash
-
+python -m compas_rhino.install -v 5.0 -p compas compas_rhino compas_ghpython
 ```
+
+> **Note** (Windows only)
+>
+> Use `-v 6.0` instead of `-v 5.0` if you want to use Rhino 6 instead of Rhino 5.
+
+Open Rhino and run the script `rhino_verify.py`.
+If this does not throw an error and prints the correct COMPAS version (`0.4.10`),
+Rhino is properly configured.
 
 **5. Set up your development environment**
 
----
+You can use any development environment that you're comfortable with,
+but for this workshop, we suggest using [Sublime Text](https://www.sublimetext.com/).
+
+
 
 ## Exercises
-
----
 
 ## Troubleshooting
