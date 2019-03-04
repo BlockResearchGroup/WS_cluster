@@ -203,7 +203,8 @@ Just reset the script engine and try again.
 Tools > PythonScript > Edit > Tools > Reset Script Engine
 ```
 
-> **Problem** *I don't see the DisplayConduit in Rhino on Mac*
+> **Problem**
+> <br />*I don't see the DisplayConduit in Rhino on Mac*
 
 DisplayConduits are not supported yet on Mac. The result should be correct though...
 
