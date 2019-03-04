@@ -84,6 +84,14 @@ conda env create -f workshop.yml
 conda activate workshop
 ```
 
+> **On Mac**
+>
+> In addition to the above commands, on Mac you will also need to install `python.app`
+> Don't ask, it is a long story :)
+> ```bash
+> conda install python.app
+> ```
+
 **3. Check the installation**
 
 Launch the Python interpreter and import `compas`, `compas_rhino`, `compas_ghpython`.
