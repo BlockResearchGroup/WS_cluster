@@ -1,12 +1,17 @@
 import os
 
 from compas.utilities import pairwise
+import os
 from compas.datastructures import Network
 from compas.topology import shortest_path
 from compas.plotters import NetworkPlotter
 
+# path to the sample file
+DATA = os.path.join(os.path.dirname(__file__), '..', 'data')
+FILE = os.path.join(DATA, 'grid_irregular.obj')
+
 # load a network from an OBJ file
-network = Network.from_obj('../data/grid_irregular.obj')
+network = Network.from_obj(FILE)
 
 # define start and end vertices
 start = 21

@@ -9,6 +9,7 @@ from compas.datastructures import network_dr
 DATA = os.path.join(os.path.dirname(__file__), '..', 'data')
 FILE = os.path.join(DATA, 'lines.obj')
 
+
 # define a callback function
 # for plotting the intermediate configurations of the DR process
 def callback(k, xyz, crits, args):

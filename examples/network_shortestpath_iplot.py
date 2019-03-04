@@ -1,7 +1,12 @@
+import os
 from compas.datastructures import Network
 from compas.plotters import NetworkPlotter
 from compas.topology import shortest_path
 from compas.utilities import pairwise
+
+# path to the sample file
+DATA = os.path.join(os.path.dirname(__file__), '..', 'data')
+FILE = os.path.join(DATA, 'grid_irregular.obj')
 
 
 # wrapper for the shortest path function
@@ -24,7 +29,7 @@ def onpick(event):
 
 
 # load a network from an OBJ file
-network = Network.from_obj('../data/grid_irregular.obj')
+network = Network.from_obj(FILE)
 
 # define the starting point
 start = 21
