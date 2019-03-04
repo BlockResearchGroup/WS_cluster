@@ -27,7 +27,7 @@ COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Com
 ## Requirements
 
 * Operating System: Mac (OSX) or Windows
-* [Anaconda Python Distribution](https://www.anaconda.com/download/): 3.x
+* [Anaconda Python Distribution](https://www.anaconda.com/download/): 3.7
 * [Rhino](https://www.rhino3d.com/)
 * Code editor: We recommend [Sublime Text](https://www.sublimetext.com/) for this workshop.
 * Git: [official command-line client](https://git-scm.com/) or visual GUI (e.g. [Github Desktop](https://desktop.github.com/) or [SourceTree](https://www.sourcetreeapp.com/))
@@ -59,21 +59,21 @@ We will install **COMPAS** and its dependencies in a new environment specificall
 
 <i>b. Using the git command line client</i>
 
-* *On Windows*: launch Anaconda Prompt, **as administrator!**
-  <br />*On Mac*: launch Terminal
+* On Windows: launch Anaconda Prompt **as administrator**
+  <br />On Mac: launch Terminal
 * Go to the destination folder where you wish to place all the workshop material
 * Run `git clone https://github.com/BlockResearchGroup/WS_cluster.git`
 
 **2. Create an environment and install COMPAS.**
 
 If you haven't done so yet, 
-launch Anaconda Prompt **as administrator!** (*on Windows*)
-or Terminal (*on Mac*).
+launch Anaconda Prompt **as administrator** (on Windows)
+or Terminal (on Mac).
 
 Go to the repository folder you just cloned and run
 
 ```bash
-conda env create -f workshop.yml
+conda env create -f environment.yml
 conda activate workshop
 ```
 
@@ -83,15 +83,15 @@ conda activate workshop
 > For example, if you cloned the repository into a folder called `Code` in your home directory,
 > you should run the following to change to the correct folder:
 >
-> *On Mac*: ```cd ~/Code/WS_cluster```
-> <br />*On Windows*: ```cd %USERPROFILE%\Code\WS_cluster```
+> On Mac: ```cd ~/Code/WS_cluster```
+> <br />On Windows: ```cd %USERPROFILE%\Code\WS_cluster```
 
 **3. Check the installation**
 
 Launch the Python interpreter and import `compas`, `compas_rhino`, `compas_ghpython`.
 
-*On Windows*: type `python` in Anaconda Prompt
-<br />*On Mac*: type `python` in Terminal
+On Windows: type `python` in Anaconda Prompt
+<br />On Mac: type `python` in Terminal
 
 ```python
 >>> import compas
@@ -109,7 +109,7 @@ is active.
 **4. Configure Rhino**
 
 To make the installed packages available in Rhino,
-run the following from Anaconda Prompt (*on Windows*) or Terminal (*on Mac*):
+run the following from Anaconda Prompt (on Windows) or Terminal (on Mac):
 
 ```bash
 python -m compas_rhino.install -v 5.0 -p compas compas_rhino compas_ghpython
@@ -120,7 +120,7 @@ python -m compas_rhino.install -v 5.0 -p compas compas_rhino compas_ghpython
 > Use `-v 6.0` instead of `-v 5.0` if you want to use Rhino 6 instead of Rhino 5.
 
 Open Rhino and run the script [verify_rhino.py](verify_rhino.py).
-If this does not throw an error and prints the correct COMPAS version (`0.4.10`),
+If this does not throw an error and prints the correct COMPAS version (`0.5.0`),
 Rhino is properly configured.
 
 > **Note**
@@ -143,19 +143,26 @@ Sublime Text: Project > Add Folder to Project...
 The folder and its contents should appear in the sidebar.
 Select *Conda* as Build System, activate the workshop environment,
 and Run the script [verify_editor.py](verify_editor.py).
-If this does not throw an error and prints the correct COMPAS version (`0.4.10`),
+If this does not throw an error and prints the correct COMPAS version (`0.5.0`),
 your editor is properly configured.
 
 ## Examples
 
 *   Network
     *   shortest path (plot): [network_shortestpath.py](examples/network_shortestpath.py)
+        <br />*Plot the shortest path between two vertices of a network.*
     *   shortest path (interactive plot): [network_shortestpath.py](examples/network_shortestpath.py)
+        <br />*Plot the shortest path between a given start vertex and a point picked by the user.*
     *   equilibrium (dynamic plot): [network_equilibrium.py](examples/network_equilibrium.py)
+        <br />*Plot the dynamic relaxation process of a network with randomly prescribed edge force densities.*
 *   Mesh
-    *   dijkstra path (Rhino): [mesh_dijkstra_rhino.py](examples/mesh_dijkstra_rhino.py)
-    *   equilibrium (Rhino): [mesh_equilibrium_rhino.py](examples/mesh_equilibrium_rhino.py)
-    *   smoothing on surface (Rhino): [mesh_smoothing_rhino.py](examples/mesh_smoothing_rhino.py)
     *   subdivision (Rhino): [mesh_subdivision_rhino.py](examples/mesh_subdividion_rhino.py)
-    *   isolines (plot): [mesh_isolines.py](examples/mesh_isolines.py)
-    *   planarisation (plot): [mesh_planarization.py](examples/mesh_planarization.py) 
+        <br />*Generate a subdivision surface using a control mesh.*
+    *   smoothing on surface (Rhino): [mesh_smoothing_rhino.py](examples/mesh_smoothing_rhino.py)
+        <br />*Smooth a mesh on a given target surface.*
+*   RPC
+    *   ...
+
+## Troubleshooting
+
+*No problems so far...*

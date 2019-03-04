@@ -1,0 +1,14 @@
+name: workshop
+
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3.6
+    - pip=19.0.1
+    - compas
+    - shapely
+    - flake8
+    - cython
+    - pip:
+        - triangle
