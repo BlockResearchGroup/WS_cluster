@@ -58,6 +58,7 @@ We will install **COMPAS** and its dependencies in a new environment specificall
 >
 > On Windows
 > ```bash
+> mkdir %USERPROFILE%\Code
 > mkdir %USERPROFILE%\Code\Workshops
 > cd %USERPROFILE%\Code\Workshops
 > git clone https://github.com/BlockResearchGroup/WS_cluster.git
@@ -65,7 +66,7 @@ We will install **COMPAS** and its dependencies in a new environment specificall
 >
 > On Mac
 > ```bash
-> mkdir ~/Code/Workshops
+> mkdir -p ~/Code/Workshops
 > cd ~/Code/Workshops
 > git clone https://github.com/BlockResearchGroup/WS_cluster.git
 > ```
