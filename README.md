@@ -194,7 +194,8 @@ https://www.scivision.co/python-windows-visual-c++-14-required/
 > **Problem**
 > <br />*Exception: The lib folder for IronPython does not exist in this location: C:\Users\AppData\Roaming\McNeel\Rhinoceros\6.0\Plug-ins\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\settings\lib*
 
-Not sure yet :)
+This happens if you have a brand new installation of Rhino.
+After opening Rhino and the PythonScriptEditor for the first time, the required folders will be created automatically.
 
 > **Problem** 
 > <br />*NoneType object has no attribute Geometry*
