@@ -7,7 +7,7 @@ COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Com
 ## Schedule
 
 *   Day 1
-    *   10.00: Introduction by Philipe
+    *   10.00: Introduction by Philippe
     *   10.30: COMPAS framework -- *Presentation about the structure of COMPAS*
     *   11.00: Discussion & Questions
     *   11.30: Installation & Setup
