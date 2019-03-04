@@ -7,7 +7,7 @@ COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Com
 ## Schedule
 
 *   Day 1
-    *   10.00: Introduction by Philipe
+    *   10.00: Introduction by Philippe
     *   10.30: COMPAS framework -- *Presentation about the structure of COMPAS*
     *   11.00: Discussion & Questions
     *   11.30: Installation & Setup
@@ -83,6 +83,14 @@ cd WS_cluster
 conda env create -f workshop.yml
 conda activate workshop
 ```
+
+> **On Mac**
+>
+> In addition to the above commands, on Mac you will also need to install `python.app`
+> Don't ask, it is a long story :)
+> ```bash
+> conda install python.app
+> ```
 
 **3. Check the installation**
 
