@@ -163,20 +163,23 @@ Finally, run `verify_editor.py` to check the setup. If this prints `0.4.21` in t
 
 ## Examples
 
-*   Network
-    *   shortest path (plot): [network_shortestpath.py](examples/network_shortestpath.py)
+*   Plotters
+    *   Shortest path (plot): [network_shortestpath.py](examples/network_shortestpath.py)
         <br />*Plot the shortest path between two vertices of a network.*
-    *   shortest path (interactive plot): [network_shortestpath.py](examples/network_shortestpath.py)
+    *   Shortest path (interactive plot): [network_shortestpath.py](examples/network_shortestpath.py)
         <br />*Plot the shortest path between a given start vertex and a point picked by the user.*
-    *   equilibrium (dynamic plot): [network_equilibrium.py](examples/network_equilibrium.py)
+    *   Equilibrium (dynamic plot): [network_equilibrium.py](examples/network_equilibrium.py)
         <br />*Plot the dynamic relaxation process of a network with randomly prescribed edge force densities.*
-*   Mesh
-    *   subdivision (Rhino): [mesh_subdivision_rhino.py](examples/mesh_subdividion_rhino.py)
+*   Rhino
+    *   Subdivision: [mesh_subdivision_rhino.py](examples/mesh_subdividion_rhino.py)
         <br />*Generate a subdivision surface using a control mesh.*
-    *   smoothing on surface (Rhino): [mesh_smoothing_rhino.py](examples/mesh_smoothing_rhino.py)
+    *   Mesh smoothing: [mesh_smoothing_rhino.py](examples/mesh_smoothing_rhino.py)
         <br />*Smooth a mesh on a given target surface.*
-
-*More examples will follow...*
+*   RPC
+    *   Equilibrium: [rpc_fd_rhino.py](examples/rpc_fd_rhino.py)
+        <br />*Force desnity calculation using Numpy/Scipy.*
+    *   CDT: [rpc_cdt_rhino.py](examples/rpc_cdt_rhino.py)
+        <br />*Constrained Delaunay Triangulation using triangle.*
 
 ## Troubleshooting
 
