@@ -172,4 +172,30 @@ Finally, run `verify_editor.py` to check the setup. If this prints `0.4.21` in t
 
 ## Troubleshooting
 
-*No problems so far...*
+If you have a problem and don't find the solution here, please submit an issue on the issue tracker of the repository.
+
+> **Problem**
+> <br />*error: Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools*
+
+Follow the link to install Microsoft Visual C++ 14.0
+https://www.scivision.co/python-windows-visual-c++-14-required/
+
+> **Problem**
+> <br />*Exception: The lib folder for IronPython does not exist in this location: C:\Users\AppData\Roaming\McNeel\Rhinoceros\6.0\Plug-ins\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\settings\lib*
+
+Not sure yet :)
+
+> **Problem** 
+> <br />*NoneType object has no attribute Geometry*
+
+This sometimes happens in Rhino when wrapping Rhino Geometry.
+Just reset the script engine and try again.
+
+```
+Tools > PythonScript > Edit > Tools > Reset Script Engine
+```
+
+> **Problem** *I don't see the DisplayConduit in Rhino on Mac*
+
+DisplayConduits are not supported yet on Mac. The result should be correct though...
+
