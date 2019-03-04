@@ -99,7 +99,6 @@ On Windows: type `python` in Anaconda Prompt
 
 If no error messages appear, you're good to go.
 Type `exit()` to quit the interpreter.
-
 The packages `compas`, `compas_rhino`, `compas_ghpython` are
 now installed in your environment, and will be available in Python if the workshop environment
 is active.
@@ -118,7 +117,7 @@ python -m compas_rhino.install -v 5.0 -p compas compas_rhino compas_ghpython
 > Use `-v 6.0` instead of `-v 5.0` if you want to use Rhino 6 instead of Rhino 5.
 
 Open Rhino and run the script [verify_rhino.py](verify_rhino.py).
-If this does not throw an error and prints the correct COMPAS version (`0.4.20`),
+If this does not throw an error and prints the correct COMPAS version (`0.4.21`),
 Rhino is properly configured.
 
 > **Note**
@@ -141,7 +140,7 @@ Open the Command Palette (`Shift+Control+P` on Windows `Shift+Command+P` on Mac)
 This will display a list of Python interpreters found on your system.
 Choose the intepreter of the workshop environment (`Python ... ('workshop': conda)`).
 
-Finally, run `verify_editor.py` to check the setup. If this prints `0.4.20` in the Terminal window, VS Code is properly configured.
+Finally, run `verify_editor.py` to check the setup. If this prints `0.4.21` in the Terminal window, VS Code is properly configured.
 
 > **Note**
 >
@@ -168,8 +167,8 @@ Finally, run `verify_editor.py` to check the setup. If this prints `0.4.20` in t
         <br />*Generate a subdivision surface using a control mesh.*
     *   smoothing on surface (Rhino): [mesh_smoothing_rhino.py](examples/mesh_smoothing_rhino.py)
         <br />*Smooth a mesh on a given target surface.*
-*   RPC
-    *   ...
+
+*More examples will follow...*
 
 ## Troubleshooting
 
