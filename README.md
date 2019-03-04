@@ -29,12 +29,12 @@ COMPAS introduction workshop for the new Cluster of Excellence *"Integrative Com
 * Operating System: Mac (OSX) or Windows
 * [Anaconda Python Distribution](https://www.anaconda.com/download/): 3.7
 * [Rhino](https://www.rhino3d.com/)
-* Code editor: We recommend [Sublime Text](https://www.sublimetext.com/) for this workshop.
-* Git: [official command-line client](https://git-scm.com/) or visual GUI (e.g. [Github Desktop](https://desktop.github.com/) or [SourceTree](https://www.sourcetreeapp.com/))
+* Code editor: We recommend [VS Code](https://code.visualstudio.com/) for this workshop.
+* Git: [official command-line client](https://git-scm.com/)
 
 > **Note**
 >
-> If you use Rhino 5.0, make sure to install the following
+> If you use Rhino 5.0 on Windows, make sure to install the following
 > 
 > * [Grasshopper](https://www.grasshopper3d.com/)
 > * [GHPython](https://www.food4rhino.com/app/ghpython)
@@ -49,42 +49,36 @@ We will install **COMPAS** and its dependencies in a new environment specificall
 
 **1. Clone the workshop repository.**
 
-<i>a. Using a visual git client (e.g. SourceTree)</i>
-
-* Launch SourceTree
-* Go to `File -> Clone / New`
-* Select `Clone from URL`
-* Provide the source URL: `https://github.com/BlockResearchGroup/WS_cluster.git`
-* Provide a destination path (i.e. the folder where you wish to place all workshop material)
-
-<i>b. Using the git command line client</i>
-
-* On Windows: launch Anaconda Prompt **as administrator**
+* On Windows: launch Anaconda Prompt (**as administrator**)
   <br />On Mac: launch Terminal
 * Go to the destination folder where you wish to place all the workshop material
 * Run `git clone https://github.com/BlockResearchGroup/WS_cluster.git`
 
+> **Example**
+>
+> On Windows
+> ```bash
+> mkdir %USERPROFILE%\Code\Workshops
+> cd %USERPROFILE%\Code\Workshops
+> git clone https://github.com/BlockResearchGroup/WS_cluster.git
+> ```
+>
+> On Mac
+> ```bash
+> mkdir ~/Code/Workshops
+> cd ~/Code/Workshops
+> git clone https://github.com/BlockResearchGroup/WS_cluster.git
+> ```
+
 **2. Create an environment and install COMPAS.**
 
-If you haven't done so yet, 
-launch Anaconda Prompt **as administrator** (on Windows)
-or Terminal (on Mac).
-
-Go to the repository folder you just cloned and run
+Change into the repository folder you just cloned and run
 
 ```bash
+cd WS_cluster
 conda env create -f environment.yml
 conda activate workshop
 ```
-
-> **Not working?**
->
-> Make sure you really are in the repository folder, before running the commands above.
-> For example, if you cloned the repository into a folder called `Code` in your home directory,
-> you should run the following to change to the correct folder:
->
-> On Mac: ```cd ~/Code/WS_cluster```
-> <br />On Windows: ```cd %USERPROFILE%\Code\WS_cluster```
 
 **3. Check the installation**
 
@@ -120,7 +114,7 @@ python -m compas_rhino.install -v 5.0 -p compas compas_rhino compas_ghpython
 > Use `-v 6.0` instead of `-v 5.0` if you want to use Rhino 6 instead of Rhino 5.
 
 Open Rhino and run the script [verify_rhino.py](verify_rhino.py).
-If this does not throw an error and prints the correct COMPAS version (`0.5.0`),
+If this does not throw an error and prints the correct COMPAS version (`0.4.20`),
 Rhino is properly configured.
 
 > **Note**
@@ -131,21 +125,22 @@ Rhino is properly configured.
 **5. Set up your development environment**
 
 You can use any development environment that you're comfortable with,
-but the instructions for this workshop are written for [Sublime Text](https://www.sublimetext.com/).
-Detailed instructions for installing and configuring Sublime Text can be found [here](https://compas-dev.github.io/main/environments/sublimetext.html).
+but the instructions for this workshop are written for [VS Code](https://code.visualstudio.com/).
 
-Once Sublime Text is set up, open an new window and add the workshop folder to a new project
+We recommend installing the following extensions
 
-```
-Sublime Text: Project > Add Folder to Project...
-```
+* Python
+* EditorConfig
 
-The folder and its contents should appear in the sidebar.
-Select *Conda* as Build System, activate the workshop environment,
-and Run the script [verify_editor.py](verify_editor.py).
-If this does not throw an error and prints the correct COMPAS version (`0.5.0`),
-your editor is properly configured.
+Open the *Extensions* view by clicking on the icon on the left of VS Code, search for the extensions using the search box, and install them. Then open the workspace of the workshop (`WS_cluster/workshop.code-workspace`) using `File > Open Workspace...`.
 
+Finally, run `verify_editor.py` to check the setup. If this prints `0.4.20`, VS Code is properly configured.
+
+> **Note**
+>
+> To simply run the script, right-click and select `Run Python File in Terminal...`.
+> 
+> To use the debugger, open the *Debug* view by clicking the icon on the left of VS Code and select the configuration for your OS. Then just hit `F5`.
 
 
 ## Examples
