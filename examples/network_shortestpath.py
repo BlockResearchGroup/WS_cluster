@@ -1,3 +1,5 @@
+import os
+
 from compas.utilities import pairwise
 from compas.datastructures import Network
 from compas.topology import shortest_path

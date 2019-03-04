@@ -146,6 +146,8 @@ and Run the script [verify_editor.py](verify_editor.py).
 If this does not throw an error and prints the correct COMPAS version (`0.5.0`),
 your editor is properly configured.
 
+
+
 ## Examples
 
 *   Network

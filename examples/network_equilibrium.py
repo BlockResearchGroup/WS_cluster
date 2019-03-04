@@ -1,8 +1,13 @@
+import os
 import random
+import compas
 from compas.datastructures import Network
 from compas.plotters import NetworkPlotter
 from compas.datastructures import network_dr
 
+# path to the sample file
+DATA = os.path.join(os.path.dirname(__file__), '..', 'data')
+FILE = os.path.join(DATA, 'lines.obj')
 
 # define a callback function
 # for plotting the intermediate configurations of the DR process
@@ -18,7 +23,7 @@ def callback(k, xyz, crits, args):
 
 
 # make a network
-network = Network.from_obj('../data/lines.obj')
+network = Network.from_obj(FILE)
 
 # identify the fixed vertices
 network.set_vertices_attribute('is_fixed', True, keys=network.vertices_where({'vertex_degree': 1}))

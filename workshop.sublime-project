@@ -1,0 +1,38 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Workshop",
+			"selector": "source.python",
+            "osx": 
+            {
+                "shell_cmd": "\"\\$HOME/anaconda3/envs/workshop/bin/pythonw\" -u \"$file\""
+            },
+            "windows":
+            {
+                "shell_cmd": "\"%HOME%\\Anaconda3\\envs\\workshop\\bin\\pythonw\" -u \"$file\""
+            }
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"env":
+		{
+            "windows":
+            {
+                "HOME": "%USERPROFILE%"
+            },
+			"darwin":
+			{
+				"HOME": "$HOME"
+			}
+		}
+	}
+}
