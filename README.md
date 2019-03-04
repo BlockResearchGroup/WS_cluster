@@ -58,25 +58,29 @@ We will install **COMPAS** and its dependencies in a new environment specificall
 >
 > On Windows
 > ```bash
-> mkdir %USERPROFILE%\Code\Workshops
-> cd %USERPROFILE%\Code\Workshops
+> mkdir %USERPROFILE%\Code
+> cd %USERPROFILE%\Code
+> mkdir Workshops
+> cd Workshops
 > git clone https://github.com/BlockResearchGroup/WS_cluster.git
 > ```
 >
 > On Mac
 > ```bash
-> mkdir ~/Code/Workshops
-> cd ~/Code/Workshops
+> mkdir ~/Code
+> cd ~/Code
+> mkdir Workshops
+> cd Workshops
 > git clone https://github.com/BlockResearchGroup/WS_cluster.git
 > ```
 
 **2. Create an environment and install COMPAS.**
 
-Change into the repository folder you just cloned and run
+Change into the repository folder you just cloned and create the environment from the provided file
 
 ```bash
 cd WS_cluster
-conda env create -f environment.yml
+conda env create -f workshop.yml
 conda activate workshop
 ```
 
@@ -96,8 +100,8 @@ On Windows: type `python` in Anaconda Prompt
 If no error messages appear, you're good to go.
 Type `exit()` to quit the interpreter.
 
-The packages `compas`, `compas_rhino`, `compas_ghpython` (and `compas_blender`) are
-now installed in your environment, and will be available in Python if the environment
+The packages `compas`, `compas_rhino`, `compas_ghpython` are
+now installed in your environment, and will be available in Python if the workshop environment
 is active.
 
 **4. Configure Rhino**
@@ -122,26 +126,33 @@ Rhino is properly configured.
 > To run a script in Rhino, just type `RunPythonScript` at the Rhino command prompt
 > and select the script you want to run.
 
-**5. Set up your development environment**
+**5. Configure VS Code**
 
-You can use any development environment that you're comfortable with,
-but the instructions for this workshop are written for [VS Code](https://code.visualstudio.com/).
-
-We recommend installing the following extensions
+We recommend installing the following extensions for [VS Code](https://code.visualstudio.com/)
 
 * Python
 * EditorConfig
 
-Open the *Extensions* view by clicking on the icon on the left of VS Code, search for the extensions using the search box, and install them. Then open the workspace of the workshop (`WS_cluster/workshop.code-workspace`) using `File > Open Workspace...`.
+Open the *Extensions* view by clicking on the icon on the left of the editor, search for the extensions using the search box, and install them. 
+Open the workspace of the workshop (`WS_cluster/workshop.code-workspace`) using `File > Open Workspace...`.
 
-Finally, run `verify_editor.py` to check the setup. If this prints `0.4.20`, VS Code is properly configured.
+Then, activate the conda environment you created earlier.
+Open the Command Palette (`Shift+Control+P` on Windows `Shift+Command+P` on Mac) type `Interpreter`, and select `Python: Select Interpreter` from the available options.
+This will display a list of Python interpreters found on your system.
+Choose the intepreter of the workshop environment (`Python ... ('workshop': conda)`).
+
+Finally, run `verify_editor.py` to check the setup. If this prints `0.4.20` in the Terminal window, VS Code is properly configured.
 
 > **Note**
 >
-> To simply run the script, right-click and select `Run Python File in Terminal...`.
-> 
-> To use the debugger, open the *Debug* view by clicking the icon on the left of VS Code and select the configuration for your OS. Then just hit `F5`.
+> To run the script WITHOUT debugging, press `Control + F5`.
+> <br />To run the script WITH debugging, press `F5`.
 
+> **on Mac**
+>
+> After selecting a Python interpreter, in `WS_cluster/.vscode` you will find a settings file (`settings.json`) with the path to that interpreter.
+> If running scripts with `Control + F5` does not work, and you get an error message with somewhere at the end something like `libc++abi.dylib: ...`,
+> try changing the interpreter to `pythonw` instead of `python`.
 
 ## Examples
 
