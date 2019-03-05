@@ -6,20 +6,14 @@
     "configurations": [
 
         {
-            "name": "Python: OSX",
+            "name": "Python",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "pythonPath": "${env:HOME}/anaconda3/envs/workshop/bin/pythonw"
-        },
-        {
-            "name": "Python: Windows",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "pythonPath": "${env:USERPROFILE}/Anaconda3/envs/workshop/python"
+            "osx" : {
+                "pythonPath": "${env:HOME}/anaconda3/envs/workshop/bin/pythonw"
+            }
         }
     ]
 }

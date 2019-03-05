@@ -44,5 +44,10 @@ plotter.update(pause=1.0)
 # run the DR
 network_dr(network, callback=callback)
 
+# plot the final configuration
+plotter.draw_vertices(facecolor={key: '#000000' for key in network.vertices_where({'is_fixed': True})})
+plotter.draw_edges()
+plotter.update(pause=1.0)
+
 # keep the plot alive
 plotter.show()

@@ -1,7 +1,7 @@
 import os
 from compas.utilities import pairwise
 from compas.datastructures import Network
-from compas.topology import shortest_path
+from compas.topology import dijkstra_path
 from compas.plotters import NetworkPlotter
 
 # path to the sample file
@@ -11,12 +11,24 @@ FILE = os.path.join(DATA, 'grid_irregular.obj')
 # make network from sample file
 network = Network.from_obj(FILE)
 
+# make a dictionary of edge weights
+weight = {(u, v): network.edge_length(u, v) for u, v in network.edges()}
+
+# add the same weight in both directions
+weight.update({(v, u): weight[(u, v)] for u, v in network.edges()})
+
+# set high weights for some specific edges
+weight[(29, 2)] = 1000
+weight[(2, 29)] = 1000
+weight[(18, 1)] = 1000
+weight[(1, 18)] = 1000
+
 # specify start and end
 start = 21
-end = 11
+end = 19
 
 # compute the shortest path taking into account the edge weights
-path = shortest_path(network.adjacency, start, end)
+path = dijkstra_path(network.adjacency, weight, start, end)
 
 # convert the path to network edges
 edges = [(v, u) if not network.has_edge(u, v) else (u, v) for u, v in pairwise(path)]
@@ -38,7 +50,8 @@ plotter.draw_vertices(
 # draw the edges
 plotter.draw_edges(
     color={(u, v): '#ff0000' for u, v in edges},
-    width={(u, v): 5.0 for u, v in edges}
+    width={(u, v): 5.0 for u, v in edges},
+    text={(u, v): '{:.1f}'.format(weight[(u, v)]) for u, v in network.edges()}
 )
 
 # show the plot
