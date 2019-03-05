@@ -30,7 +30,8 @@ vertices, faces = proxy.conforming_delaunay_triangle(points, segments)
 mesh = Mesh.from_vertices_and_faces(vertices, faces)
 
 # visualise
-artist = MeshArtist(mesh)
+artist = MeshArtist(mesh, layer="RPC::CDT")
+artist.clear_layer()
 artist.draw_vertices()
 artist.draw_vertexlabels()
 artist.draw_faces()

@@ -212,3 +212,13 @@ Tools > PythonScript > Edit > Tools > Reset Script Engine
 
 DisplayConduits are not supported yet on Mac. The result should be correct though...
 
+> **Problem**
+> <br />*RPC call generates non-descript "Fault".*
+
+For whatever reason sometimes the proxy server can't be started.
+Simply starting it from the command line should solve this.
+
+```bash
+conda activate workshop
+python -c "from compas.rpc import Proxy; proxy = Proxy()"
+```
